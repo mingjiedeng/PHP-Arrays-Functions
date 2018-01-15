@@ -1,4 +1,7 @@
 <?php
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+
     $animals = array("panda", "alpaca", "boa");
 
     function sortAndPrint($myArray) {
@@ -11,7 +14,7 @@
 
     function add($str, $myArray) {
         echo "adding $str...<br>";
-        if (strtolower($str), array_map("strtolower", $myArray)){
+        if (in_array(strtolower($str), array_map("strtolower", $myArray)){
             $myArray[] = $str;
             sortAndPrint($myArray);
         }
