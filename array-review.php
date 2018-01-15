@@ -11,6 +11,7 @@
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 
+    //This section is for assignment part 1
     $animals = array("panda", "alpaca", "boa");
 
     function sortAndPrint(&$myArray) {
@@ -38,7 +39,8 @@
 
 
 
-    $cupcakeFlavors = array("grasshopper" => "The Grasshopper",
+    //This section is for assignment part 2
+    $flavors = array("grasshopper" => "The Grasshopper",
                             "maple"     => "Whiskey Maple Bacon",
                             "carrot"    => "Carrot Walnut",
                             "caramel"   => "Salted Caramel Cupcake",
@@ -46,22 +48,12 @@
                             "lemon"     => "Lemon Drop",
                             "tiramisu"  => "Tiramisu" );
 
+    echo "--This is the output of the assignment part 2: <br>";
 
-
-    print <<< EOT
-    <div>
-      <label>--This is the output of the assignment part 2:</label>
-      <ul>
-EOT;
-
-    foreach ($cupcakeFlavors as $key => $value) {
-        echo "<li><input type='checkbox' value='$key'> $value </li>";
+    foreach ($flavors as $key => $value) {
+        echo "<input type=\"checkbox\" name=\"flavors[]\" value=\"$key\">$value<br>";
     }
 
-    print <<< EOT
-      </ul>
-    </div>
-EOT;
 
 
 
