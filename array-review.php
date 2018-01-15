@@ -38,3 +38,30 @@
 
 
 
+    $cupcakeFlavors = array("grasshopper" => "The Grasshopper",
+                            "maple"     => "Whiskey Maple Bacon",
+                            "carrot"    => "Carrot Walnut",
+                            "caramel"   => "Salted Caramel Cupcake",
+                            "velvet"    => "Red Velvet",
+                            "lemon"     => "Lemon Drop",
+                            "tiramisu"  => "Tiramisu" );
+
+
+
+    print <<< EOT
+    <div>
+      <label>--This is the output of the assignment part 2:</label>
+      <ul>
+EOT;
+
+    foreach ($cupcakeFlavors as $key => $value) {
+        echo "<li><input type='checkbox' value='$key'> $value </li>";
+    }
+
+    print <<< EOT
+      </ul>
+    </div>
+EOT;
+
+
+
